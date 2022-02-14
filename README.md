@@ -5,6 +5,8 @@
 - A blog where you can log your works
 - Have multiple users so you can read others experiences
 
+<img src="./screenshots/sc_1.png">
+
 ## Frontend
 
 1.  Rect Js

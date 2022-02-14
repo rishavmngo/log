@@ -1,0 +1,41 @@
+.post-options {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-attr > * {
+  display: inline-block;
+  margin-right: 20px;
+  color: rgb(85, 85, 85);
+  transition: color 0.1s;
+  transition-timing-function: linear;
+  cursor: pointer;
+}
+
+.post-attr > *:hover {
+  color: rgb(47, 47, 47);
+}
+.post--likes > * {
+  margin-right: 5px;
+}
+.post--comments > * {
+  margin-right: 5px;
+}
+
+.post-attr > * > * {
+  display: inline-block;
+}
+
+.post-actions--save {
+  background-color: rgba(103, 105, 105, 0.3);
+  color: rgb(51, 51, 51);
+  padding: 7px 10px;
+  border-radius: 5px;
+  transition: background-color 0.1s, color 0.1s;
+  transition-timing-function: linear;
+  cursor: pointer;
+}
+.post-actions--save:hover {
+  background-color: rgba(103, 105, 105, 0.4);
+  color: rgb(17, 17, 17);
+}

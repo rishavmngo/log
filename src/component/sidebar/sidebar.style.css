@@ -1,0 +1,45 @@
+.sidebar {
+  width: 300px;
+  padding: 10px;
+  background-color: white;
+  margin: 5px;
+  border-radius: 5px;
+  height: 330px;
+}
+
+.sidebar--item {
+  font-size: 18px;
+  color: rgb(73, 73, 73);
+}
+.list-item {
+  padding: 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+.list-item > * {
+  display: inline-block;
+  margin: 0 5px;
+}
+.list-item:hover > * {
+  text-decoration: underline;
+  color: var(--log-blue);
+}
+.list-item:hover {
+  background-color: var(--log-blue-alpha);
+  border-radius: 5px;
+}
+
+.socials--item {
+  color: rgb(41, 41, 41);
+  margin: 10px;
+  height: 45px;
+  width: 45px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.socials--item:hover {
+  background-color: var(--log-blue-alpha);
+  color: var(--log-blue);
+}

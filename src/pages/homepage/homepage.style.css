@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(218, 226, 226);
+}
+
+.homepage {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}

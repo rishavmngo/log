@@ -6,3 +6,6 @@ body {
   display: grid;
   grid-template-columns: auto auto auto;
 }
+body{
+  margin-top: 80px;
+}

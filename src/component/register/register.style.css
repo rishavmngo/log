@@ -1,0 +1,9 @@
+.field-group {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.link {
+  color: rgb(0, 87, 158);
+}

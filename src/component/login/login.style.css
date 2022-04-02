@@ -1,0 +1,40 @@
+:root {
+  --field-main-color: crimson;
+  --login-btn-hover: rgb(238, 5, 52);
+}
+.link {
+  color: rgb(0, 87, 158);
+}
+
+.group {
+  margin: 7px 0px;
+  /* width: 70%; */
+  border-radius: 5px;
+}
+.field-group {
+  position: absolute;
+  width: 70%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.field-heading {
+  color: var(--field-main-color);
+}
+
+.login-btn {
+  height: 35px;
+  border-radius: 10px;
+  color: white;
+  /* width: 70%; */
+  outline: none;
+  border: none;
+  background-color: var(--field-main-color);
+  font-size: 20px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  background-color: var(--login-btn-hover);
+}

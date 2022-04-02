@@ -1,0 +1,43 @@
+:root{
+    --modal-color-success: rgb(47, 255, 113);
+    --modal-color-error: rgb(243, 0, 16);
+}
+.modal{
+    position: absolute;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: black;
+    outline: 2px solid black;
+    bottom: 0px;
+    right: -200px;
+    opacity: 10%;
+    transition: all 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.failed{
+    background-color: var(--modal-color-error);
+    outline: 2px solid var(--modal-color-error);
+    /* transform: translate(-200px,0px); */
+    bottom: 0px;
+    right: 0px;
+
+    opacity: 100%;
+
+}
+.success{
+
+    background-color: var(--modal-color-success);
+    outline: 2px solid var(--modal-color-success);
+    bottom: 0px;
+    right: 0px;
+    opacity: 100%;
+}
+.hide {
+    display: none;
+    background-color: blue;
+}
+.modal-message{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}

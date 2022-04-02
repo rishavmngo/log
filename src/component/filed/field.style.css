@@ -1,0 +1,39 @@
+.inp {
+  outline: none;
+  height: 25px;
+  border: none;
+  margin-top: 13px;
+  width: 100%;
+  color: rgb(39, 39, 39);
+}
+
+label {
+  display: block;
+  position: absolute;
+  transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1),
+    font-size 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+  color: gray;
+  pointer-events: none;
+}
+
+.center {
+  top: 50%;
+  left: 10px;
+  transform: translate(0%, -50%);
+}
+.trans {
+  transform: translate(0%, -100%);
+  font-size: 13px;
+}
+
+.group {
+  border: 1px solid black;
+  height: 40px;
+  padding: 0 10px;
+  position: relative;
+  background-color: white;
+}
+
+.outline {
+  outline: 1px solid rgb(255, 35, 35);
+}

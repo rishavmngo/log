@@ -4,6 +4,12 @@
   --log-navbar-color: rgb(255, 255, 255);
   --log-fade-black: rgb(31, 31, 31);
 }
+
+link{
+  text-decoration: none;
+  color: inherit;
+
+}
 * {
   box-sizing: border-box;
   padding: 0;

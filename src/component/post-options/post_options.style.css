@@ -6,14 +6,15 @@
 .post-attr > * {
   display: inline-block;
   margin-right: 20px;
-  color: rgb(85, 85, 85);
+  color: var(--log-homepage-post-options-text-color);
   transition: color 0.1s;
   transition-timing-function: linear;
   cursor: pointer;
 }
 
 .post-attr > *:hover {
-  color: rgb(47, 47, 47);
+  color: var(--log-homepage-post-options-hover-text-color);
+
 }
 .post--likes > * {
   margin-right: 5px;
@@ -27,8 +28,9 @@
 }
 
 .post-actions--save {
-  background-color: rgba(103, 105, 105, 0.3);
+  background-color: var(--log-homepage-post-options-save-background-color);
   color: rgb(51, 51, 51);
+  color: var(--log-homepage-post-options-save-text-color);
   padding: 7px 10px;
   border-radius: 5px;
   transition: background-color 0.1s, color 0.1s;
@@ -37,5 +39,7 @@
 }
 .post-actions--save:hover {
   background-color: rgba(103, 105, 105, 0.4);
+  background-color: var(--log-homepage-post-options-save-hover-background-color) ;
   color: rgb(17, 17, 17);
+  color: var(--log-homepage-post-options-save-hover-text-color);
 }

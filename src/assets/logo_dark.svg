@@ -5,7 +5,7 @@
    viewBox="0 0 135.467 135.467"
    version="1.1"
    id="svg6"
-   sodipodi:docname="logo.svg"
+   sodipodi:docname="logo_dark.svg"
    inkscape:version="1.1.2 (76b9e6a115, 2022-02-25)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -32,12 +32,12 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg6" />
   <path
-     style="fill:#25252b;fill-opacity:1;fill-rule:evenodd;stroke-width:.999999"
+     style="fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke-width:0.999999"
      d="M2.666 74.656V417.28h167.24a99.925 99.925 0 0 1-11.199-11.199 99.925 99.925 0 0 1 99.926-99.926 99.925 99.925 0 0 1 99.924 99.926 99.925 99.925 0 0 1-11.2 11.2h164.577V74.655H348.463"
      transform="scale(.26458)"
      id="path2" />
   <path
-     style="fill:#ffffff;fill-opacity:1;stroke-width:0.22162"
+     style="fill:#1a1a1a;fill-opacity:1;stroke-width:0.22162"
      transform="scale(-1)"
      d="m -120.634,-97.08 h 21.164 v 65.334 h -21.164 z m 85.361,-1.195 h 21.164 v 57.645887 7.688113 h -21.164 z"
      id="path4"

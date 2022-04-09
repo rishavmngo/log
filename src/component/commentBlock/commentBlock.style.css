@@ -1,0 +1,64 @@
+.commentBlock{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.main--comment{
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 7;
+}
+.comment--options{
+    display: flex;
+    justify-content: space-between;
+}
+.comment--options-left-child > *{
+    display: inline-block;
+    margin: 0 1px;
+}
+.comment--options-right-child {
+    width: 10px;
+    height: 10px;
+    background-color: gray;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+.comment--desp {
+    margin: 20px 0;
+
+}
+.comment--author-pic{
+    background-color: crimson;
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.comment--reaction > * {
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.comment--likes{
+    padding: 1px 5px;
+    cursor: pointer;
+}
+.comment--reply{
+    padding: 1px 5px;
+    cursor: pointer;
+}
+
+.comment--likes:hover{
+    background-color: rgb(255, 219, 219);
+    color: white;
+}
+.comment--reply:hover{
+    background-color: rgb(193, 193, 193);
+    color: white;
+}

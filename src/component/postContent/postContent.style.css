@@ -1,0 +1,58 @@
+
+.postContent--main{
+    background-color: var(--log-component-main-color);
+    width: 70%;
+    padding: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+position: relative;
+}
+.singlePost--edit{
+    background-color: rgb(17, 17, 17);
+    padding: 2px 5px;
+    width: 70px;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+
+}
+.singlePost--edit:hover{
+    background-color: rgb(45, 45, 45);
+    text-decoration: underline;
+}
+.singlePost--details{
+    display: grid;
+    width: 25%;
+    grid-template-columns: auto auto ;
+    grid-template-rows: auto auto;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.singlePost--details__publish-date{
+    grid-column: 2/span 2;
+    font-size: 15px;
+}
+.singlePost--details__author-name{
+    font-size: 23px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.singlePost--details__author-pic{
+    background-color: crimson;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    grid-row: 1/span 2;
+}
+.singlePost--title{
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.singlePost--content{
+    font-size: 20px;
+}

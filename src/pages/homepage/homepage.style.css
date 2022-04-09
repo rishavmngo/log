@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(218, 226, 226);
+  background-color: var(--log-body-color);
 }
 
 .homepage {

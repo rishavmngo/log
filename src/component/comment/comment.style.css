@@ -1,0 +1,7 @@
+.comment-block{
+    padding: 10px;
+}
+.replies > *{
+    margin-left: 70px;
+    margin-top: 10px;
+}

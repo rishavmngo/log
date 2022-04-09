@@ -1,0 +1,6 @@
+.singlePost--main{
+    display: grid;
+}
+.postContent-main{
+    z-index: -1;
+}

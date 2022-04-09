@@ -1,7 +1,7 @@
 .sidebar {
   width: 300px;
   padding: 10px;
-  background-color: white;
+  background-color: var(--log-sidebar-color);
   margin: 5px;
   border-radius: 5px;
   height: 330px;
@@ -9,12 +9,16 @@
 
 .sidebar--item {
   font-size: 18px;
-  color: rgb(73, 73, 73);
+  /* color: rgb(73, 73, 73); */
+  color: var(--log-homepage-sidebar-tab-text-color);
 }
 .list-item {
   padding: 10px;
   margin: 2px;
   cursor: pointer;
+}
+.list-icon {
+  color: var(--log-homepage-sidebar-tab-icon-color)
 }
 .list-item > * {
   display: inline-block;
@@ -30,7 +34,7 @@
 }
 
 .socials--item {
-  color: rgb(41, 41, 41);
+  color: var(--log-social-item-color);
   margin: 10px;
   height: 45px;
   width: 45px;

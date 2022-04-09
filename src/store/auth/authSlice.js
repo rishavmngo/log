@@ -5,10 +5,10 @@ import jwtDecode from "jwt-decode";
 const token = localStorage.getItem("token");
 
 const initialState = {
-	user: {},
 	loggedIn: !!token,
 	loginStatus: "idle",
 	registerStatus: "idle",
+	token: token || "",
 };
 
 export const login = createAsyncThunk("login", async (user) => {
@@ -23,7 +23,6 @@ export const login = createAsyncThunk("login", async (user) => {
 });
 
 export const register = createAsyncThunk("register", async (user) => {
-	console.log(user);
 	const response = await axios.post(
 		"http://localhost:5000/api/auth/register",
 		{
@@ -37,20 +36,17 @@ const auth = createSlice({
 	name: "auth",
 	initialState,
 	reducers: {
-		setUser(state, action) {
-			state.user = action.payload;
-		},
 		logout(state, action) {
-			state.user = {};
 			state.loggedIn = false;
+			state.token = "";
 		},
 	},
 	extraReducers(builder) {
 		builder
 			.addCase(login.fulfilled, (state, action) => {
-				state.user = action.payload;
 				state.loginStatus = "success";
 				state.loggedIn = true;
+				state.token = localStorage.getItem("token");
 			})
 			.addCase(login.pending, (state, action) => {
 				state.loginStatus = "pending";
@@ -70,5 +66,5 @@ const auth = createSlice({
 	},
 });
 
-export const { setUser, logout } = auth.actions;
+export const { logout } = auth.actions;
 export default auth.reducer;

@@ -11,8 +11,8 @@ function LoginUser({ handleToggleFormClick }) {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const dispatch = useDispatch();
-	const userLoggedIn = useSelector((state) => state.loggedIn);
 	let navigate = useNavigate();
+	const userLoggedIn = useSelector((state) => state.auth.loggedIn);
 
 	//INPUT HANDLER
 	function handleChangeEmail(e) {
@@ -21,6 +21,12 @@ function LoginUser({ handleToggleFormClick }) {
 	function handleChangePassword(e) {
 		setPassword(e.target.value);
 	}
+
+	useEffect(() => {
+		if (userLoggedIn) {
+			navigate("/");
+		}
+	}, []);
 
 	if (userLoggedIn) {
 		navigate("/");

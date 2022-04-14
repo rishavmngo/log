@@ -4,6 +4,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 import "./postContent.style.css";
 import Postcomment from "../postComment/postcomment.component";
+import Moment from "react-moment";
 
 export default function PostContent() {
 	const user = useSelector((state) => state.user.userInfo);
@@ -26,17 +27,17 @@ export default function PostContent() {
 
 	return (
 		<div className="postContent--main">
-			{user.id === post.userid && (
+			{user.id === post.author_id && (
 				<div className="singlePost--edit">Edit</div>
 			)}
 			<div className="singlePost--header">
 				<div className="singlePost--details">
 					<div className="singlePost--details__author-pic"></div>
 					<div className="singlePost--details__author-name">
-						{post.full_name}
+						{post.author_full_name}
 					</div>
 					<div className="singlePost--details__publish-date">
-						Apr 4
+						<Moment format="MMMM DD">{post.timestamp}</Moment>
 					</div>
 				</div>
 			</div>

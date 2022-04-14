@@ -2,19 +2,22 @@ import React, { useEffect, useState } from "react";
 import "./feed.style.css";
 import Post from "../post/post.component";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 export default function Feed() {
 	const [posts, setPosts] = useState([]);
+	const user = useSelector((state) => state.user.userInfo);
 
 	useEffect(() => {
-		fetchPosts();
-	}, []);
+		user.id && fetchPosts();
+	}, [user]);
 
 	async function fetchPosts() {
 		try {
-			const result = await axios.get("http://localhost:5000/api/post/");
+			const result = await axios.get(
+				`http://localhost:5000/api/post/feed/${user.id}`
+			);
 			setPosts(result.data);
-			console.log(posts);
 		} catch (error) {
 			console.log(error);
 		}

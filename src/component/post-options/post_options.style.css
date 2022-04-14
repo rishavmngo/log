@@ -43,3 +43,7 @@
   color: rgb(17, 17, 17);
   color: var(--log-homepage-post-options-save-hover-text-color);
 }
+
+.like--filled{
+  color: red;
+}

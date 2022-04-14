@@ -1,31 +1,19 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CommentBlock from "../commentBlock/commentBlock.component";
-import { useParams } from "react-router";
 
 import "./comment.style.css";
-import { fetchReplies } from "../../store/comment/commentSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { changeValue } from "../../store/comment/commentSlice";
+import { useSelector } from "react-redux";
 
 export default function Comment({ comment }) {
-	const changeVal = useSelector((state) => state.comment.replies);
-	const [replies, setReplies] = useState([]);
 	const [showReply, setShowReply] = useState(false);
-	const dispatch = useDispatch();
-	useEffect(() => {
-		async function fetchData() {
-			try {
-				const result = await axios.get(
-					`http://localhost:5000/api/comment/reply/${comment.id}`
-				);
-				setReplies(result.data);
-			} catch (error) {
-				console.log(error);
-			}
-		}
-		fetchData();
-	}, [changeVal]);
+	const replies = useSelector((state) => state.comment.comments)
+		.filter((i) => i.parent_id === comment.id)
+		.sort(
+			(a, b) =>
+				a.published_date < b.published_date &&
+				a.published_time < b.published_time
+		);
+
 	return (
 		<div className="comment-block">
 			<div className="parent_comment">
@@ -42,7 +30,7 @@ export default function Comment({ comment }) {
 						</span>
 					) : (
 						<span className="show-replies toggler">
-							show replies
+							{`show replies (${replies.length})`}
 						</span>
 					)}
 				</div>

@@ -3,8 +3,10 @@ import { FaHeart } from "react-icons/fa";
 import "./post.style.css";
 import PostOptions from "../post-options/post_options.component";
 import { useNavigate } from "react-router";
+import Moment from "react-moment";
 
 export default function Post({ post }) {
+	console.log("id: ", post);
 	const navigate = useNavigate();
 	return (
 		<div className="post">
@@ -12,13 +14,15 @@ export default function Post({ post }) {
 				<img src="../../assets/author.jpg" className="author--pic" />
 				<div className="others">
 					<p className="author--name">{post.author_full_name}</p>
-					<p className="publish-date">Feb 7</p>
+					<p className="publish-date">
+						<Moment format="MMMM DD">{post.timestamp}</Moment>
+					</p>
 				</div>
 			</div>
 			<div className="post--details">
 				<div
 					className="post--title"
-					onClick={() => navigate(`/post/${post.post_id}`)}
+					onClick={() => navigate(`/post/${post.id}`)}
 				>
 					{post.title}
 				</div>

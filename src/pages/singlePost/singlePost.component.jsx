@@ -8,8 +8,10 @@ export default function SinglePost() {
 	return (
 		<div className="singlePost--main">
 			<Navbar />
-			<PostContent className="postContent-main" />
-			<Postcomment />
+			<div className="main">
+				<PostContent className="postContent-main" />
+				<Postcomment />
+			</div>
 		</div>
 	);
 }

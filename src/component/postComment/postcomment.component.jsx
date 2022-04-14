@@ -9,7 +9,13 @@ import { fetchComment } from "../../store/comment/commentSlice";
 
 export default function Postcomment({ post }) {
 	// const [comments, setComment] = useState([]);
-	const comments = useSelector((state) => state.comment.comments);
+	const comments = useSelector((state) => state.comment.comments)
+		.filter((i) => i.parent_id === null)
+		.sort(
+			(a, b) =>
+				a.published_date < b.published_date &&
+				a.published_time < b.published_time
+		);
 	const userLoggedIn = useSelector((state) => state.auth.loggedIn);
 	const { id } = useParams();
 	const dispatch = useDispatch();
@@ -27,11 +33,12 @@ export default function Postcomment({ post }) {
 		// }
 		// fetchData();
 		dispatch(fetchComment(id));
+		// setComment(com.filter((i) => i.parent_id === null));
 	}, []);
 
 	return (
 		<div className="comment--section">
-			<h1 className="comment--section__title">Comments</h1>
+			<h1 className="comment--section__title">{`Comments (${comments.length})`}</h1>
 			{userLoggedIn && <CreateComment />}
 			{comments.map((comment) => (
 				<Comment key={comment.id} comment={comment} />

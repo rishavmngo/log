@@ -4,18 +4,24 @@ import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { BiMessageSquare } from "react-icons/bi";
 
 export default function PostOptions({ post }) {
+	console.log(post.user_liked === true);
 	return (
 		<div className="post-options">
 			<div className="post-attr">
 				<div className="post--likes">
-					<AiOutlineHeart />
-					{/* <AiFillHeart /> */}
-					<div className="like-count">119 Reactions</div>
+					{post.user_liked !== "true" ? (
+						<AiOutlineHeart />
+					) : (
+						<AiFillHeart className="like--filled" />
+					)}
+					<div className="like-count">
+						{post.likes_count} Reactions
+					</div>
 				</div>
 				<div className="post--comments">
 					<BiMessageSquare />
 					<div className="comment-count">
-						{post.total_comment} Comments
+						{post.comments_count} Comments
 					</div>
 				</div>
 			</div>

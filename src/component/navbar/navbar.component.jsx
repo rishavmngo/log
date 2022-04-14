@@ -34,11 +34,15 @@ export default function Navbar() {
 		});
 	}
 
-	// useEffect(() => {
-	// 	document.addEventListener("click", () => {
-	// 		setShowUserDetails(false);
-	// 	});
-	// });
+	document.addEventListener("click", (e) => {
+		if (e.target === document.querySelector(".userMenu--main")) {
+			e.stopPropgation();
+		}
+		if (e.target === document.querySelector(".user--name")) {
+			return;
+		}
+		setShowUserDetails(false);
+	});
 
 	return (
 		<header className="navbar">
@@ -74,7 +78,9 @@ export default function Navbar() {
 							>
 								{user.firstname} {user.lastname}
 							</span>
-							{showUserDetails && <UserMenu />}
+							{showUserDetails && (
+								<UserMenu className="userMenu--main" />
+							)}
 						</div>
 					) : (
 						<div className="auth-btns">

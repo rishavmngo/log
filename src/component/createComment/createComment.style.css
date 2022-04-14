@@ -1,0 +1,31 @@
+.createComment{
+    display: flex;
+    flex-direction: column;
+    flex-grow: grow;
+    width: 70%;
+}
+.comment--input{
+    line-height: 30px;
+    margin: 5px;
+}
+.create--comment--btn{
+    margin: 5px;
+    width: 100px;
+    background-color: crimson;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px; 
+    padding: 5px;
+    text-align: center;
+}
+/* .create--comment--btn:hover{
+    background-color: rgb(177, 18, 50);
+
+} */
+
+.create--comment--btn:active{
+    background-color: rgb(177, 18, 50);
+
+}

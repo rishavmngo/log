@@ -1,0 +1,13 @@
+.results > *{
+    margin: 10px 0px;
+}
+
+
+.result--post__sort{
+
+    cursor: pointer;
+}
+.result--post__sort:hover{
+    color: rgb(97, 97, 97);
+
+}

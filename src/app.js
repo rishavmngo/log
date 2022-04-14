@@ -11,6 +11,7 @@ import jwtDecode from "jwt-decode";
 import SinglePost from "./pages/singlePost/singlePost.component";
 import CreatePost from "./component/createPost/createPost.component";
 import NotFound from "./component/notFound/notFound.component";
+import ResultsPage from "./pages/resultsPage/resultsPage.component";
 
 export default function App() {
 	const dispatch = useDispatch();
@@ -31,6 +32,7 @@ export default function App() {
 				<Route path="/auth/register" element={<UserAuth />} />
 				<Route exact path="/post/:id" element={<SinglePost />} />
 				<Route path="/createPost" element={<CreatePost />} />
+				<Route path="/results" element={<ResultsPage />} />
 			</Routes>
 		</>
 	);

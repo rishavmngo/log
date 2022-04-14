@@ -4,6 +4,9 @@
   --log-navbar-color: rgb(255, 255, 255);
   --log-fade-black: rgb(31, 31, 31);
 }
+.full_name{
+  text-transform: capitalize;
+}
 
 link{
   text-decoration: none;

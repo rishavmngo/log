@@ -11,6 +11,7 @@ import UserMenu from "../userMenu/userMenu.component";
 import ThemeButton from "../themeButton/themebutton/themeButton.component";
 export default function Navbar() {
 	const [showUserDetails, setShowUserDetails] = useState(false);
+	const [inputBox, setInputBox] = useState("");
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const user = useSelector((state) => state.user.userInfo);
@@ -21,6 +22,16 @@ export default function Navbar() {
 	}
 	function goToHomepage() {
 		navigate("/");
+	}
+	function handleSearch(e) {
+		if (e.key !== "Enter" && e.type !== "click") return;
+		if (inputBox.length <= 0) return;
+		const searchString = inputBox.split(" ").join("+");
+
+		navigate({
+			pathname: "/results",
+			search: `?search_query=${searchString}`,
+		});
 	}
 
 	// useEffect(() => {
@@ -43,9 +54,15 @@ export default function Navbar() {
 					<input
 						type="input"
 						placeholder="Search..."
+						value={inputBox}
+						onChange={(e) => setInputBox(e.target.value)}
 						class="search-box--input"
+						onKeyDown={handleSearch}
 					></input>
-					<FaSistrix class="search-box--search" />
+					<FaSistrix
+						onClick={handleSearch}
+						class="search-box--search"
+					/>
 				</div>
 				<ThemeButton className="theme-btn" />
 				<div className="acc">
@@ -53,7 +70,7 @@ export default function Navbar() {
 						<div className="user">
 							<span
 								onClick={(e) => handleUserDetails(e)}
-								className="user--name"
+								className="user--name full_name"
 							>
 								{user.firstname} {user.lastname}
 							</span>

@@ -5,3 +5,17 @@
     margin-left: 70px;
     margin-top: 10px;
 }
+
+.toggler{
+    cursor: pointer;
+
+}
+
+.toggler:hover{
+    text-decoration: underline;
+}
+.show-replies-btn{
+    color: rgb(100, 100, 185);
+    font-weight: 700;
+    margin: 5px 50px;
+}

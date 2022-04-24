@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { unlike, like } from "../../store/like/like";
 import { fetchCurrentPost } from "../../store/post/postSlice";
 import { useNavigate } from "react-router";
-import { fetchUserCurrentPost } from "../../store/post/postSlice";
 
 export default function SinglePostOptions() {
 	const dispatch = useDispatch();
@@ -41,9 +40,7 @@ export default function SinglePostOptions() {
 			user_id: user.id,
 			post_id: post.id,
 		};
-		user.id
-			? dispatch(fetchUserCurrentPost(obj))
-			: dispatch(fetchCurrentPost(obj.post_id));
+		dispatch(fetchCurrentPost(obj));
 	}, [userLikedStatus, userUnlikedStatus, user.id, dispatch, post.id]);
 
 	return (

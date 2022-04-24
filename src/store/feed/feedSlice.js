@@ -5,19 +5,10 @@ const initialState = {
 	feedPosts: [],
 };
 
-export const fetchUserFeed = createAsyncThunk(
-	"fetchUserFeedPost",
-	async (id) => {
-		const response = await axios.get(
-			`http://localhost:5000/api/post/feed/${id}`
-		);
-
-		return response.data;
-	}
-);
-
-export const fetchFeed = createAsyncThunk("fetchFeedPost", async () => {
-	const response = await axios.get(`http://localhost:5000/api/post/feed/all`);
+export const fetchFeed = createAsyncThunk("fetchFeedPost", async (id) => {
+	const response = await axios.get(
+		`http://localhost:5000/api/post/feed/${id ? id : null}`
+	);
 
 	return response.data;
 });
@@ -26,13 +17,9 @@ const feed = createSlice({
 	initialState,
 	reducers: {},
 	extraReducers(builder) {
-		builder
-			.addCase(fetchUserFeed.fulfilled, (state, action) => {
-				state.feedPosts = action.payload;
-			})
-			.addCase(fetchFeed.fulfilled, (state, action) => {
-				state.feedPosts = action.payload;
-			});
+		builder.addCase(fetchFeed.fulfilled, (state, action) => {
+			state.feedPosts = action.payload;
+		});
 	},
 });
 

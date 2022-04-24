@@ -3,7 +3,6 @@ import "./singlePost.style.css";
 import PostContent from "../../component/postContent/postContent.component";
 import Navbar from "../../component/navbar/navbar.component";
 import Postcomment from "../../component/postComment/postcomment.component";
-import SinglePostOptions from "../../component/singlePostOptions/singlePostOptions.component";
 
 export default function SinglePost() {
 	return (

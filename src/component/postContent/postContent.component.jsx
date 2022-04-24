@@ -1,15 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import "./postContent.style.css";
-import Postcomment from "../postComment/postcomment.component";
 import Moment from "react-moment";
 import SinglePostOptions from "../singlePostOptions/singlePostOptions.component";
-import {
-	fetchCurrentPost,
-	fetchUserCurrentPost,
-} from "../../store/post/postSlice";
+import { fetchCurrentPost } from "../../store/post/postSlice";
 import Loading from "../loading/loading.comonent";
 
 export default function PostContent() {
@@ -23,10 +18,8 @@ export default function PostContent() {
 			user_id: user.id,
 			post_id: id,
 		};
-		user.id
-			? dispatch(fetchUserCurrentPost(obj))
-			: dispatch(fetchCurrentPost(obj.post_id));
-	}, [user, id]);
+		dispatch(fetchCurrentPost(obj));
+	}, [user, id, dispatch]);
 
 	return (
 		<div className="postContent--main">

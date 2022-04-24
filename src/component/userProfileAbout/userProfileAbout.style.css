@@ -1,0 +1,39 @@
+.userProfileAbout {
+	background-color: white;
+	margin: 0px auto;
+	padding: 70px 40px;
+}
+
+.about--details__item {
+	margin-bottom: 20px;
+	padding: 5px;
+	/* background-color: rgb(232, 232, 232); */
+	/* border-left: 3px solid rgb(78, 78, 78); */
+	/* border-radius: 5px; */
+	width: 80%;
+}
+.details--key {
+	margin-right: 25px;
+	font-weight: bold;
+	font-size: 20px;
+	vertical-align: top;
+	text-transform: capitalize;
+}
+.details--value {
+	display: inline-block;
+	width: 70%;
+	font-weight: medium;
+	font-size: 18px;
+	color: rgb(43, 43, 43);
+}
+.about_socials > * {
+	font-size: 33px;
+	margin-right: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	color: rgb(49, 49, 49);
+}
+.about_socials > *:hover {
+	background-color: rgb(44, 44, 44);
+	color: white;
+}

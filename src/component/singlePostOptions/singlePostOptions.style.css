@@ -1,0 +1,44 @@
+.singlePostOptions {
+	background-color: white;
+	width: 100%;
+	padding: 5px 10px;
+	margin: 5px 0px;
+}
+.singlePostOptions {
+}
+
+.singlePost--likes {
+	font-size: 25px;
+	display: inline;
+	padding: 0px 10px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+.singlePost--likes > * {
+	vertical-align: middle;
+	margin: 0px 5px;
+}
+.singlePost--likes:hover {
+	opacity: 50%;
+	border: 1px solid rgb(204, 22, 22);
+	border-radius: 10px;
+	background-color: rgb(249, 199, 199);
+}
+
+.singlePost--likes:active {
+	opacity: 100%;
+	border: 1px solid rgb(204, 22, 22);
+	border-radius: 10px;
+}
+.like--heart__filled {
+	color: rgb(204, 22, 22);
+}
+.singlePost--like__count {
+	user-select: none;
+}
+
+.processing_like {
+	user-select: none;
+	cursor: not-allowed;
+	background-color: rgb(191, 191, 191);
+}

@@ -1,29 +1,32 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "./postContent.style.css";
 import Postcomment from "../postComment/postcomment.component";
 import Moment from "react-moment";
+import SinglePostOptions from "../singlePostOptions/singlePostOptions.component";
+import {
+	fetchCurrentPost,
+	fetchUserCurrentPost,
+} from "../../store/post/postSlice";
+import Loading from "../loading/loading.comonent";
 
 export default function PostContent() {
 	const user = useSelector((state) => state.user.userInfo);
-	const [post, setPost] = useState({});
+	const dispatch = useDispatch();
+	const post = useSelector((state) => state.post.currentPost);
 	const { id } = useParams();
-	useEffect(() => {
-		fetchPosts();
-	}, []);
 
-	async function fetchPosts() {
-		try {
-			const result = await axios.get(
-				`http://localhost:5000/api/post/${id}`
-			);
-			setPost(result.data);
-		} catch (error) {
-			console.log(error);
-		}
-	}
+	useEffect(() => {
+		const obj = {
+			user_id: user.id,
+			post_id: id,
+		};
+		user.id
+			? dispatch(fetchUserCurrentPost(obj))
+			: dispatch(fetchCurrentPost(obj.post_id));
+	}, [user, id]);
 
 	return (
 		<div className="postContent--main">
@@ -43,6 +46,8 @@ export default function PostContent() {
 			</div>
 			<div className="singlePost--title">{post.title}</div>
 			<div className="singlePost--content">{post.content}</div>
+			{Object.keys(post).length === 0 && <Loading className="loading" />}
+			<SinglePostOptions post={post} />
 		</div>
 	);
 }

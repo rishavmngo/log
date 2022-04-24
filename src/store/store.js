@@ -3,6 +3,9 @@ import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./user/userSlice";
 import preferenceReducer from "./preferences/preferencesSlice";
 import commentReducer from "./comment/commentSlice";
+import feedReducer from "./feed/feedSlice";
+import likesSlice from "./like/like";
+import currentPostSlice from "./post/postSlice";
 
 const store = configureStore({
 	reducer: {
@@ -10,6 +13,9 @@ const store = configureStore({
 		user: userReducer,
 		preference: preferenceReducer,
 		comment: commentReducer,
+		feed: feedReducer,
+		like: likesSlice,
+		post: currentPostSlice,
 	},
 });
 

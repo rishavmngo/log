@@ -1,12 +1,14 @@
-.singlePost--main{
+.singlePost--main {
 }
-.postContent-main{
-    z-index: -1;
+.postContent-main {
+	z-index: -1;
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0px auto;
 }

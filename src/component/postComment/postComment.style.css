@@ -1,10 +1,10 @@
-:root{
-    --comment-section-background-color: white;
+:root {
+	--comment-section-background-color: white;
 }
-.comment--section{
-    background-color: var(--comment-section-background-color);
-    width: 70%;
+.comment--section {
+	background-color: var(--comment-section-background-color);
+	width: 100%;
 }
-.comment--section__title{
-    margin: 10px;
+.comment--section__title {
+	margin: 10px;
 }

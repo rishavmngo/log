@@ -41,7 +41,6 @@ export default function CreateComment({ parentId, test }) {
 				value={comment}
 				onChange={(e) => setComment(e.target.value)}
 				className="comment--input"
-				autoFocus
 			/>
 			<input class="create--comment--btn" type="submit" value="comment" />
 		</form>

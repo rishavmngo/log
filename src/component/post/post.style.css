@@ -1,71 +1,75 @@
 .post {
-  background-color: var(--log-post-color);
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+	background-color: var(--log-post-color);
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
 }
 
 .author--details {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .author--pic {
-  float: left;
-  margin-right: 15px;
+	float: left;
+	margin-right: 15px;
+	width: 50px;
+	height: 50px;
+	border-radius: 100%;
+	object-fit: cover;
 }
 
 .author--name {
-/* #505050 */
-  color: var(--log-feed-post-author-name-color);
-  font-weight: bold;
-  cursor: pointer;
-  text-transform: capitalize;
+	/* #505050 */
+	color: var(--log-feed-post-author-name-color);
+	font-weight: bold;
+	cursor: pointer;
+	text-transform: capitalize;
 }
 .author--name:hover {
-  /* color: rgb(34, 34, 34); */
-  color: var(--log-feed-post-author-name-hover-color)
+	/* color: rgb(34, 34, 34); */
+	color: var(--log-feed-post-author-name-hover-color);
 }
 .publish-date {
-  /* color: rgb(87, 87, 87); */
-  color: var(--log-feed-post-publish-date-color);
-  cursor: pointer;
+	/* color: rgb(87, 87, 87); */
+	color: var(--log-feed-post-publish-date-color);
+	cursor: pointer;
 }
 .publish-date:hover {
-  /* color: rgb(40, 40, 40); */
-  color:var(--log-feed-post-publish-date-hover-color);
+	/* color: rgb(40, 40, 40); */
+	color: var(--log-feed-post-publish-date-hover-color);
 }
 .post--details {
-  margin-left: 40px;
+	margin-left: 40px;
 }
 .post-options {
-  margin-left: 40px;
+	margin-left: 40px;
 }
 
 .post--title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 7px;
-  cursor: pointer;
-  color:var(--log-feed-post-title-color)
+	font-size: 30px;
+	font-weight: bold;
+	margin-bottom: 7px;
+	cursor: pointer;
+	color: var(--log-feed-post-title-color);
 }
 .post--title:hover {
-  color: var(--log-feed-post-title-hover-color);
+	color: var(--log-feed-post-title-hover-color);
 }
 
 .tag--list {
-  margin-bottom: 20px;
+	margin-bottom: 20px;
 }
 .tag--list > * {
-  display: inline-block;
-  margin-right: 10px;
-  cursor: pointer;
-  padding: 4px;
-  color: rgb(58, 58, 58);
-  color: var(--log-feed-post-tag-text-color)
+	display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+	padding: 4px;
+	color: rgb(58, 58, 58);
+	color: var(--log-feed-post-tag-text-color);
 }
 
 .tag--list > *:hover {
-  outline: 1px solid vr(--log-feed-post-tag-hover-outline-color);
-  border-radius: 5px;
-  background-color: var(--log-feed-post-tag-hover-background-color);
-  color: var(--log-feed-post-tag-hover-color)
+	outline: 1px solid vr(--log-feed-post-tag-hover-outline-color);
+	border-radius: 5px;
+	background-color: var(--log-feed-post-tag-hover-background-color);
+	color: var(--log-feed-post-tag-hover-color);
 }

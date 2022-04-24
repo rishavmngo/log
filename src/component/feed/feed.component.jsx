@@ -3,27 +3,27 @@ import "./feed.style.css";
 import Post from "../post/post.component";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { fetchFeed, fetchUserFeed } from "../../store/feed/feedSlice";
+import dog from "../../assets/horse.jpg";
 
 export default function Feed() {
-	const [posts, setPosts] = useState([]);
 	const user = useSelector((state) => state.user.userInfo);
+	const posts = useSelector((state) => state.feed.feedPosts);
+	const dispatch = useDispatch();
 
 	useEffect(() => {
-		user.id && fetchPosts();
+		user.id ? dispatch(fetchUserFeed(user.id)) : dispatch(fetchFeed());
 	}, [user]);
 
-	async function fetchPosts() {
-		try {
-			const result = await axios.get(
-				`http://localhost:5000/api/post/feed/${user.id}`
-			);
-			setPosts(result.data);
-		} catch (error) {
-			console.log(error);
-		}
-	}
 	return (
 		<div className="feed">
+			{posts.length <= 0 && (
+				<div className="empty_container">
+					<img src={dog} className="feed-empty" />
+					<h1>Hehee Empty!</h1>
+				</div>
+			)}
 			{posts.map((post) => (
 				<Post key={post.post_id} post={post} />
 			))}

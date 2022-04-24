@@ -12,6 +12,7 @@ import SinglePost from "./pages/singlePost/singlePost.component";
 import CreatePost from "./component/createPost/createPost.component";
 import NotFound from "./component/notFound/notFound.component";
 import ResultsPage from "./pages/resultsPage/resultsPage.component";
+import UserProfilePage from "./component/userProfilePage/userProfilePage.component";
 
 export default function App() {
 	const dispatch = useDispatch();
@@ -26,13 +27,14 @@ export default function App() {
 		<>
 			<Routes>
 				<Route path="*" element={<NotFound />} />
-				<Route path="/" element={<Homepage />} />
+				<Route exact path="/" element={<Homepage />} />
 				<Route path="/settings" element={<Settings />} />
 				<Route path="/auth/login" element={<UserAuth />} />
 				<Route path="/auth/register" element={<UserAuth />} />
 				<Route exact path="/post/:id" element={<SinglePost />} />
 				<Route path="/createPost" element={<CreatePost />} />
 				<Route path="/results" element={<ResultsPage />} />
+				<Route path="/:userName" element={<UserProfilePage />} />
 			</Routes>
 		</>
 	);

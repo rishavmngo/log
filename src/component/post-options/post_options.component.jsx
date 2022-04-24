@@ -9,20 +9,16 @@ export default function PostOptions({ post }) {
 		<div className="post-options">
 			<div className="post-attr">
 				<div className="post--likes">
-					{post.user_liked !== "true" ? (
-						<AiOutlineHeart />
+					{!post.user_liked ? (
+						<AiOutlineHeart className="like--outline" />
 					) : (
 						<AiFillHeart className="like--filled" />
 					)}
-					<div className="like-count">
-						{post.likes_count} Reactions
-					</div>
+					<div className="like-count">{post.likes_count}</div>
 				</div>
 				<div className="post--comments">
 					<BiMessageSquare />
-					<div className="comment-count">
-						{post.comments_count} Comments
-					</div>
+					<div className="comment-count">{post.comments_count}</div>
 				</div>
 			</div>
 			<div className="post-actions">

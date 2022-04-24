@@ -1,0 +1,7 @@
+.userProfilePosts {
+	/* max-width: 70%; */
+	margin: 0px auto;
+}
+.userProfilePosts > * {
+	margin-bottom: 5px;
+}

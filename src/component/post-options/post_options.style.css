@@ -1,49 +1,66 @@
 .post-options {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .post-attr > * {
-  display: inline-block;
-  margin-right: 20px;
-  color: var(--log-homepage-post-options-text-color);
-  transition: color 0.1s;
-  transition-timing-function: linear;
-  cursor: pointer;
+	display: inline;
+	margin-right: 20px;
+	color: var(--log-homepage-post-options-text-color);
+	cursor: pointer;
 }
 
 .post-attr > *:hover {
-  color: var(--log-homepage-post-options-hover-text-color);
-
+	color: var(--log-homepage-post-options-hover-text-color);
+}
+.post--likes {
+	padding: 10px auto;
 }
 .post--likes > * {
-  margin-right: 5px;
+	margin-right: 5px;
+	vertical-align: middle;
 }
 .post--comments > * {
-  margin-right: 5px;
+	margin-right: 5px;
+	vertical-align: middle;
 }
 
 .post-attr > * > * {
-  display: inline-block;
+	display: inline;
 }
 
 .post-actions--save {
-  background-color: var(--log-homepage-post-options-save-background-color);
-  color: rgb(51, 51, 51);
-  color: var(--log-homepage-post-options-save-text-color);
-  padding: 7px 10px;
-  border-radius: 5px;
-  transition: background-color 0.1s, color 0.1s;
-  transition-timing-function: linear;
-  cursor: pointer;
+	background-color: var(--log-homepage-post-options-save-background-color);
+	color: rgb(51, 51, 51);
+	color: var(--log-homepage-post-options-save-text-color);
+	padding: 7px 10px;
+	border-radius: 5px;
+	transition: background-color 0.1s, color 0.1s;
+	transition-timing-function: linear;
+	cursor: pointer;
 }
 .post-actions--save:hover {
-  background-color: rgba(103, 105, 105, 0.4);
-  background-color: var(--log-homepage-post-options-save-hover-background-color) ;
-  color: rgb(17, 17, 17);
-  color: var(--log-homepage-post-options-save-hover-text-color);
+	background-color: rgba(103, 105, 105, 0.4);
+	background-color: var(
+		--log-homepage-post-options-save-hover-background-color
+	);
+	color: rgb(17, 17, 17);
+	color: var(--log-homepage-post-options-save-hover-text-color);
 }
 
-.like--filled{
-  color: red;
+.like--filled {
+	color: rgb(211, 35, 35);
+	font-size: 20px;
+}
+.like--filled:hover {
+}
+
+.like--outline {
+	font-size: 20px;
+}
+
+.post--likes:hover {
+	/* color: rgb(194, 16, 16); */
+	opacity: 50%;
 }
